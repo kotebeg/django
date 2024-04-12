@@ -95,7 +95,7 @@ echo "from . import views" >> app27/urls.py
 
 echo "
 urlpatterns = [
-    path('', views.index, name = 'error-path'), 
+    path('', views.index, name = 'error-path'),
 ] 
 " >> app27/urls.py
 
