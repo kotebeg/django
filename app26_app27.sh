@@ -70,3 +70,4 @@ sed -i "21a\    path('app26/', include('app26.urls'))," labProjcets/labProjcets/
 sed -i "22a\    path('app27/', include('app27.urls'))," labProjcets/labProjcets/urls.py
 
 python3 labProjcets/manage.py runserver
+
