@@ -32,7 +32,7 @@ echo '
     <body>
         <ul>
             {% for month in month_list %} 
-                <li><a href="{{ month|title }}"></li>
+                <li><a href="{{ month|title }}"></a>{{ month|title }}</li>
             {% endfor %}
         </ul>
     </body>
@@ -79,7 +79,7 @@ echo "
 def index(request):
     list_items = ''
     month_list = list(monthly_challange.keys())
-    print(month_list)
+    # print(month_list)
     return render(request, 'app26/index.html', {
         'month_list': month_list
     })
