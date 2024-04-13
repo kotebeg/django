@@ -21,6 +21,26 @@ echo '
 </html>
 ' >> app26/templates/app26/app26.html
 
+touch app26/templates/app26/index.html
+
+echo '
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>All Challanges</title>
+    </head>
+    <body>
+        <ul>
+            {% for month in month_list %} 
+                <li><a href="{{ month|title }}"></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
+' >> app26/templates/app26/index.html
+
+
+
 
 touch app26/urls.py
 echo "from django.urls import path" >> app26/urls.py
@@ -59,14 +79,10 @@ echo "
 def index(request):
     list_items = ''
     month_list = list(monthly_challange.keys())
-    
-    for month in month_list:
-        month_path = reverse('month-challange', args = [month])
-        list_items += f'<li><a href=\"{month_path}\">{month.capitalize()}</li>'
-    
-    response_data = f'<ul>{list_items}</ul>'
-    
-    return HttpResponse(response_data)
+    print(month_list)
+    return render(request, 'app26/index.html', {
+        'month_list': month_list
+    })
 
 def get_month_by_id(request, month):
         month_list = list(monthly_challange.keys())
