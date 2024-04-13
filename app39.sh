@@ -32,7 +32,7 @@ echo '
     <body>
         <ul>
             {% for month in month_list %} 
-                <li><a href="{{ month|title }}"></a>{{ month|title }}</li>
+                <li><a href="{{ month|title }}">{{ month|title }}</a></li>
             {% endfor %}
         </ul>
     </body>
