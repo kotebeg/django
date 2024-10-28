@@ -1,6 +1,9 @@
+
 django-admin startproject labProjcets
 cd labProjcets
 python3 manage.py startapp app26
+
+
 touch app26/urls.py
 echo "from django.urls import path" >> app26/urls.py
 echo "from . import views" >> app26/urls.py
