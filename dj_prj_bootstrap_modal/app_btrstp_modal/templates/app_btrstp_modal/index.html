@@ -1,0 +1,94 @@
+{% extends "app_btrstp_modal/layout.html" %}
+
+
+{% block body %}
+
+<div style = "margin: 10px">
+    <!-- Trigger button to open the modal -->
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#centeredModal_1">
+        Open Centered dark Modal
+    </button>
+
+    <!-- Modal Structure -->
+    <div class="modal fade" id="centeredModal_1" tabindex="-1" aria-labelledby="centeredModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="centeredModalLabel">Centered Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped table-dark text-center">
+                        <thead> 
+                            <tr>
+      
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                      
+                                <td>Otto</td>
+                                <td>@mdo</td>
+
+                            </tr>
+                            <tr>
+                            
+                                <td>Thornton</td>
+                                <td>@fat</td>
+            
+                            </tr>
+                            <tr>
+                         
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+
+                            </tr>
+                            <tr>
+                           
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+      
+                            </tr>
+                            <tr>
+                      
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            <tr>
+                      
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            <tr>
+                         
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            <tr>
+                          
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Apply</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</div>
+
+{% endblock%}
+
+
