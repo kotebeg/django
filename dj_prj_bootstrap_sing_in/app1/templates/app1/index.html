@@ -1,5 +1,6 @@
 {% extends "app1/layout.html" %}
 {% block body %}
+
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path
@@ -71,17 +72,18 @@
   
     <main class="form-signin w-100 m-auto">
       <h1 class="text-center">SiteName</h1>
-      <form>
+
+      <form action = "{% url 'home' %}" method="post">
+        {% csrf_token %}
         <!-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
         <p class="fw-normal text-center">please sign in</p>
         <!-- <h3 class="fw-normal text-center">please sign in</h3> -->
-  
         <div class="form-floating">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name = "floatingInput_name">
           <label for="floatingInput">Email address</label>
         </div>
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name = "floatingPassword_name">
           <label for="floatingPassword">Password</label>
         </div>
   
@@ -90,9 +92,10 @@
         <label class="form-check-label" for="flexCheckDefault">
           Remember me
         </label>
-      </div> -->
+        < /div> -->
         <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
         <!-- <p class="mt-5 mb-3 text-body-secondary text-center">&copy; 2024</p> -->
       </form>
     </main>
+
 {% endblock %}
