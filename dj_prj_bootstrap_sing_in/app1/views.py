@@ -27,6 +27,7 @@ def home(request):
                 # print('-->', request.POST, type(request.POST))
                 usr_nm = request.POST['floatingInput_name']
                 usr_ps = request.POST['floatingPassword_name']
+                # print(usr_nm, usr_ps)
                 # print('-->', request.POST['floatingInput_name'])
                 # print('-->', request.POST['floatingPassword_name'])
 
